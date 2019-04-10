@@ -1,11 +1,12 @@
 package ovh.spajstech.azure.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
 import ovh.spajstech.azure.repository.EmployeeRepository;
 
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 import java.util.Optional;
 
@@ -28,6 +29,13 @@ public class EmployeeController {
         {
             return employee.get();
         }
-        return new EmployeeModel();
+        return new EmployeeModel(null, null, null);
+    }
+
+    @PostMapping(path = "/api/employees", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public void addEmployee(@RequestBody EmployeeModel employee, HttpServletResponse response)
+    {
+        repository.save(employee);
+        response.setStatus(201);
     }
 }
