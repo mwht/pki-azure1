@@ -1,11 +1,12 @@
 package ovh.spajstech.azure.model;
 
 public class Place {
-    public Double lat;
-    public Double lon;
-    public String name;
-    public String image;
-    public String description;
+    private Integer id;
+    private Double lat;
+    private Double lon;
+    private String name;
+    private String image;
+    private String description;
 
     public Place(Double lat, Double lon, String name, String image, String description) {
         this.lat = lat;
