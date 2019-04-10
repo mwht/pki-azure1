@@ -32,9 +32,10 @@ public class PlacesRepository {
 
     public boolean save(Place place) {
         if(places.contains(place)) {
-            throw new NotImplementedException("Edit is not possible at this point. Sorry.");
+            return false;
         } else {
             places.add(place);
         }
+        return true;
     }
 }
