@@ -2,7 +2,6 @@ package ovh.spajstech.azure.repository;
 
 import org.springframework.stereotype.Component;
 import ovh.spajstech.azure.model.Place;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.ArrayList;
 import java.util.List;
