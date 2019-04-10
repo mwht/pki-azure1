@@ -8,12 +8,21 @@ public class Place {
     private String image;
     private String description;
 
-    public Place(Double lat, Double lon, String name, String image, String description) {
+    public Place(Integer id, Double lat, Double lon, String name, String image, String description) {
+        this.id = id;
         this.lat = lat;
         this.lon = lon;
         this.name = name;
         this.image = image;
         this.description = description;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public Double getLat() {
