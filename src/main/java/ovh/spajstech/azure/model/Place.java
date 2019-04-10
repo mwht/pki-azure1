@@ -8,6 +8,10 @@ public class Place {
     private String image;
     private String description;
 
+    public Place() {
+        this(null, null, null, null, null, null);
+    }
+
     public Place(Integer id, Double lat, Double lon, String name, String image, String description) {
         this.id = id;
         this.lat = lat;
