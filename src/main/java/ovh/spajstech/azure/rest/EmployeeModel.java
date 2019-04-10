@@ -11,11 +11,6 @@ public class EmployeeModel {
         this.id = id;
     }
 
-    public EmployeeModel()
-    {
-
-    }
-
     public String getFirstName() {
         return firstName;
     }
