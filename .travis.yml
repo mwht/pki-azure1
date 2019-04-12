@@ -1,6 +1,9 @@
 language: java
 sudo: false
-script: mvn clean compile package
+script:
+  - mvn clean compile package
+  - mkdir webapps
+  - cp target/azure-pki-1.0.war webapps
 deploy:
   provider: azure_web_apps
   username: $AZURE_USERNAME
