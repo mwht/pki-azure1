@@ -1,7 +1,8 @@
 language: java
 sudo: false
-script:
+before_install:
   - chmod +x mvnw
+script:
   - ./mvnw clean compile package
   - mkdir webapps
   - cp target/azure-pki-1.0.war webapps
