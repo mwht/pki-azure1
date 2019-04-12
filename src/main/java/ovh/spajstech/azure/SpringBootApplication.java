@@ -2,6 +2,9 @@ package ovh.spajstech.azure;
 
 import org.springframework.boot.SpringApplication;
 
+/**
+ * Initial class
+ */
 @org.springframework.boot.autoconfigure.SpringBootApplication
 public class SpringBootApplication {
     public static void main(String[] args) {
