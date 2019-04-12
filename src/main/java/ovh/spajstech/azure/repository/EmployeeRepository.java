@@ -1,7 +1,7 @@
 package ovh.spajstech.azure.repository;
 
 import org.springframework.stereotype.Component;
-import ovh.spajstech.azure.rest.EmployeeModel;
+import ovh.spajstech.azure.model.Employee;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,24 +9,24 @@ import java.util.Optional;
 
 @Component
 public class EmployeeRepository {
-    private List<EmployeeModel> employees;
+    private List<Employee> employees;
 
     public EmployeeRepository()
     {
         this.employees = new ArrayList<>();
     }
 
-    public List<EmployeeModel> findAll()
+    public List<Employee> findAll()
     {
         return employees;
     }
 
-    public Optional<EmployeeModel> findById(Integer id)
+    public Optional<Employee> findById(Integer id)
     {
         return this.employees.stream().filter(e -> e.getId().equals(id)).findFirst();
     }
 
-    public boolean save(EmployeeModel employee)
+    public boolean save(Employee employee)
     {
         if(employees.contains(employee))
         {

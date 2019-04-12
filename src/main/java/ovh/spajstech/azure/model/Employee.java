@@ -1,11 +1,11 @@
-package ovh.spajstech.azure.rest;
+package ovh.spajstech.azure.model;
 
-public class EmployeeModel {
+public class Employee {
     private String firstName;
     private String lastName;
     private Integer id;
 
-    public EmployeeModel(String firstName, String lastName, Integer id) {
+    public Employee(String firstName, String lastName, Integer id) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.id = id;
