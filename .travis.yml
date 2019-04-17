@@ -1,11 +1,11 @@
 language: java
 sudo: false
-before_install:
-  - chmod +x mvnw
+services:
+  - docker
 script:
-  - ./mvnw clean compile package
-  - mkdir webapps
-  - cp target/azure-pki-1.0.war webapps
+  - docker build -t mwht/pki-azure1:1.0 .
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push mwht/pki-azure1:1.0
 deploy:
   provider: azure_web_apps
   username: $AZURE_USERNAME
