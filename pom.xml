@@ -51,4 +51,9 @@
         </plugins>
     </build>
 
+    <properties>
+        <start-class>ovh.spajstech.azure.SpringBootApplication</start-class>
+    </properties>
+
+
 </project>
