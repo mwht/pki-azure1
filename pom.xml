@@ -43,7 +43,7 @@
                 <configuration>
                     <resourceGroup>Spajstech</resourceGroup>
                     <appName>azurepki</appName>
-                    <region>westeu2</region>
+                    <region>westeurope</region>
 
                     <!-- Java Runtime Stack for App on Linux-->
                     <linuxRuntime>tomcat 8.5-jre8</linuxRuntime>
